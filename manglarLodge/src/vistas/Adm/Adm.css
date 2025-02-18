@@ -1,0 +1,10 @@
+/*Estilos para todas las vistas del usuario con rol administrador*/
+
+.vistaInicioAdm{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background: #FFEDE1;
+}

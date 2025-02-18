@@ -10,6 +10,7 @@ import InicioAdm from './vistas/Adm/InicioAdm'
 import InicioUsuario from './vistas/Usuarios/inicioUsuario'
 import Registro from './vistas/Usuarios/Registro'
 
+
 function App() {
   
   return (

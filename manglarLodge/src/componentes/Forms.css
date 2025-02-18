@@ -1,0 +1,10 @@
+/*Estilos de tdos los formularios del proyecto */
+
+/*Estilos para los formularios de registros e inicio de sesiones */
+.formRegistro{
+    width: 100%;
+    margin: auto;
+    background: #D7F9FF;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}

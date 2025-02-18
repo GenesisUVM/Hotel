@@ -1,0 +1,10 @@
+/*Estilos para todas las vistas de los usuarios */
+
+.vistaRegistro, .vistaInicioUsuario{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background: #FFEDE1;
+}
