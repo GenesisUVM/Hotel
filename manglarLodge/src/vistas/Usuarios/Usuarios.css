@@ -7,4 +7,13 @@
     flex-wrap: wrap;
     height: 100vh;
     background: #FFEDE1;
+    flex-direction: column;
+}
+
+.linkContraseña{
+    color: #1b3463;
+    text-decoration: none ;
+}
+.linkContraseña:hover{
+    color: #80aaf8;
 }

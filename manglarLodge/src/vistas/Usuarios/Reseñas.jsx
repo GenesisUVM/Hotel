@@ -1,4 +1,4 @@
-import NavBar from '../../componentes/NavBar';
+import NavUsuarios from '../../componentes/NavUsuarios';
 import './Usuarios.css'
 
 /*Componente vista de reseñas de los usuarios y formulario para dejar una reseña */
@@ -6,7 +6,7 @@ import './Usuarios.css'
 function Reseñas(){
     return(
         <>
-        <NavBar />
+        <NavUsuarios />
         </>
     )
 };

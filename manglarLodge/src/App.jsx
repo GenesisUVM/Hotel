@@ -9,6 +9,7 @@ import BlogForm from './vistas/Adm/BlogForm'
 import InicioAdm from './vistas/Adm/InicioAdm'
 import InicioUsuario from './vistas/Usuarios/inicioUsuario'
 import Registro from './vistas/Usuarios/Registro'
+import Perfil from './vistas/Usuarios/Perfil'
 
 
 function App() {
@@ -17,14 +18,15 @@ function App() {
    <BrowserRouter>
     <Routes>
       <Route path='/' element={<Registro />} />
-      <Route path='/loginAdm' element={<InicioAdm />} />
-      <Route path='/loginUsuario' element={<InicioUsuario />} />
-      <Route path='/landingPage' element={<LandingPage />} />
-      <Route path='/reservas' element={<Reservas />} />
-      <Route path='/reseñas' element={<Reseñas />} />
-      <Route path='/blog' element={<Blog />} />
-      <Route path='/habitaciones' element={<Habitaciones />} />
-      <Route path='/blogForm' element={<BlogForm />} />
+      <Route path='/adm/loginAdm' element={<InicioAdm />} />
+      <Route path='/usuario/loginUsuario' element={<InicioUsuario />} />
+      <Route path='/usuario/landingPage' element={<LandingPage />} />
+      <Route path='/usuario/reservas' element={<Reservas />} />
+      <Route path='/usuario/reseñas' element={<Reseñas />} />
+      <Route path='/usuario/blog' element={<Blog />} />
+      <Route path='/usuario/perfil' element={<Perfil />} />
+      <Route path='/adm/habitaciones' element={<Habitaciones />} />
+      <Route path='/adm/blogForm' element={<BlogForm />} />
     </Routes>
    </BrowserRouter>
   )

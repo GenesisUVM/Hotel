@@ -1,4 +1,4 @@
-import NavBar from '../../componentes/NavBar';
+import NavBar from '../../componentes/NavUsuarios';
 import './Adm.css'
 
 /*Componente de vista del blog del hotel para el rol administrador*/

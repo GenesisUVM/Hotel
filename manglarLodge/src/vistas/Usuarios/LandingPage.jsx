@@ -1,4 +1,4 @@
-import NavBar from '../../componentes/NavBar';
+import NavUsuarios from '../../componentes/NavUsuarios';
 import './Usuarios.css'
 
 /*Coomponente de Landing Page */
@@ -6,7 +6,7 @@ import './Usuarios.css'
 function LandingPage(){
     return(
         <>
-        <NavBar />
+        <NavUsuarios />
         </>
     )
 };

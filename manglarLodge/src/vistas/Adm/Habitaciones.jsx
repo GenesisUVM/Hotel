@@ -1,4 +1,4 @@
-import NavBar from '../../componentes/NavBar';
+import NavBar from '../../componentes/NavUsuarios';
 import './Adm.css'
 
 /*Componete vista de habitaciones del rol administrador */
