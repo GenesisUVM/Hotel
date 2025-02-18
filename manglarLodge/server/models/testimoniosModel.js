@@ -6,6 +6,8 @@ const testimonioSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.String, required: true, trim: true,
     },testimonio: {
         type: mongoose.Schema.Types.String, required: true, trim: true, 
+    },tipo_habitacion: {
+        type: mongoose.Schema.Types.String, required: true, trim: true, 
     }
 });
 

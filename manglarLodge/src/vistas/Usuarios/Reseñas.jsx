@@ -1,3 +1,4 @@
+import FormTestimonio from '../../componentes/FormReseñas';
 import NavUsuarios from '../../componentes/NavUsuarios';
 import './Usuarios.css'
 
@@ -5,9 +6,10 @@ import './Usuarios.css'
 
 function Reseñas(){
     return(
-        <>
+        <div className='vistaTestimonio'>
         <NavUsuarios />
-        </>
+        <FormTestimonio />
+        </div>
     )
 };
 

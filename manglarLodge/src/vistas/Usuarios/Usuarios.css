@@ -22,7 +22,7 @@
 
 /*Estilos vista de reservas*/
 
-.vistaReservas{
+.vistaReservas , .vistaTestimonio{
     display: flex;
     flex-direction: column;
     justify-content: center;
