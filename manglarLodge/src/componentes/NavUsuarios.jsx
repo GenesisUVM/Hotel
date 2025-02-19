@@ -8,7 +8,7 @@ import './NavBar.css'
 function NavUsuarios() {
   return (
     <>
-    <Navbar data-bs-theme="light" className='navBar'>
+    <Navbar fixed="top"  data-bs-theme="light" className='navBar'>
         <Container>
           <Navbar.Brand href="/"><img
               alt="logo"

@@ -53,7 +53,7 @@ function FormTestimonio(){
 
     return(
         <div className='contForm'>
-        <Form onSubmit={onSubmit} className='formReserva'>
+        <Form onSubmit={onSubmit} className='formReseña'>
                 <Form.Group controlId="formNombre">
                     <Form.Label>Ingrese Nombre</Form.Label>
                     <Form.Control 

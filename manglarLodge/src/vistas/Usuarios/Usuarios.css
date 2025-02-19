@@ -22,12 +22,33 @@
 
 /*Estilos vista de reservas*/
 
-.vistaReservas , .vistaTestimonio{
+.vistaReservas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    background: #FFEDE1;
+}
 
+.vistaTestimonio{
+    display: flex;
+    flex-direction: column;
+    background: #FFEDE1;
+}
+
+.cardshabitaciones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6rem;
+}
+.vistaTestimonio Button{
+    width: auto;
+    margin: 2rem;
+}
+
+.modalCuerpo{
+    background:#FFEDE1 ;
 }
 
 /*Estilos para laptops y PC*/
