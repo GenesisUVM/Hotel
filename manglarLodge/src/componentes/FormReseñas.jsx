@@ -41,7 +41,7 @@ function FormTestimonio(){
         });
 
         // Muestra el mensaje de éxito
-        setMessage('Reservado con éxito!');
+        setMessage('Publicado con éxito!');
         
         //  Ocultar el mensaje después de unos segundos
         setTimeout(() => {

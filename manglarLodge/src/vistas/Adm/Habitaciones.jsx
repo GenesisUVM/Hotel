@@ -1,11 +1,11 @@
-import NavBar from '../../componentes/NavUsuarios';
+import NavAdm from '../../componentes/NavAdm';
 import './Adm.css'
 
 /*Componete vista de habitaciones del rol administrador */
 function Habitaciones(){
     return(
         <>
-        <NavBar />
+        <NavAdm />
         </>
     )
 };

@@ -1,4 +1,5 @@
-import NavBar from '../../componentes/NavUsuarios';
+import FormBlogAdm from '../../componentes/FormBlogAdm';
+import NavAdm from '../../componentes/NavAdm';
 import './Adm.css'
 
 /*Componente de vista del blog del hotel para el rol administrador*/
@@ -6,7 +7,8 @@ import './Adm.css'
 function BlogForm(){
     return(
         <>
-        <NavBar />
+        <NavAdm />
+        <FormBlogAdm />
         </>
     )
 };

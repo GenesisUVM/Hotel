@@ -24,3 +24,13 @@
     width: 90%;
     margin: auto;
 }
+
+.formBlog{
+    width: 60%;
+    margin: auto;
+    background: #D7F9FF;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    top: 6rem;
+}
