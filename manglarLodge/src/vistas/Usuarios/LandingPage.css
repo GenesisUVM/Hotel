@@ -1,0 +1,121 @@
+/* Estilos para la Landing Page */
+.landing-container {
+    font-family: "Courier New", monospace;
+    color: #0E1C36;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url("https://mmedia.eluniversal.com/19030/tucacas-93863.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background: #176087;
+    padding: 10px 20px;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background: #D7F9FF;
+    color: #176087;
+
+  }
+  
+  /* Sección de información del hotel */
+  .about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #D7F9FF;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    color: #0E1C36;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .cta-button {
+      font-size: 16px;
+    }
+  
+    .about h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* sección del clima */
+.clima-box {
+  position: absolute;
+  top: 90px; 
+  right: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #0E1C36;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.clima-box img {
+  width: 40px;
+  height: 40px;
+}
