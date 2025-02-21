@@ -6,6 +6,7 @@ import morgan from "morgan"
 import router from './routes/authRoutes.js'
 import cors from 'cors'
 
+
 connectDB()
 
 export const app = express()

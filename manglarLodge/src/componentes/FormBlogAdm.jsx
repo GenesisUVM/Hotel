@@ -1,14 +1,11 @@
-import {useState} from 'react';
-import './Forms.css'
-import {useForm} from 'react-hook-form'
-import {articuloRequest} from '../api/blogAuth.js'
+import { useState } from 'react';
+import './Forms.css';
+import { useForm } from 'react-hook-form';
+import { articuloRequest } from '../api/blogAuth.js';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-
-function FormBlogAdm(){
-
-    /*Logica para limpiar el formulario y mostrar un mensjae de exito si se registra correctamente */
+function FormBlogAdm() {
     const [formData, setFormData] = useState({
         titulo: '', 
         direccion: '',
@@ -22,7 +19,7 @@ function FormBlogAdm(){
         if (name === 'imgs') {
             setFormData({
                 ...formData,
-                [name]: Array.from(files) 
+                [name]: Array.from(files) // Convierte los archivos a un array
             });
         } else {
             setFormData({
@@ -32,45 +29,37 @@ function FormBlogAdm(){
         }
     };
 
-    /*Logica para enviar los datos del formulario a la base de datos */
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = handleSubmit(async(values, event) => {
-        event.preventDefault(); // Evita el comportamiento por defecto del formulario
+    const onSubmit = handleSubmit(async (values) => {
+        console.log('Valores enviados:', values);
 
-        
-        const data = new FormData();
-        data.append('titulo', values.titulo);
-        data.append('direccion', values.direccion);
-        data.append('descripcion', values.descripcion);
-        formData.imgs.forEach((img) => {
-            data.append('imgs', img); // Usa el mismo nombre para que el servidor lo reconozca como un array
-        });
+        const data = new FormData(); // Crea una nueva instancia de FormData
+        data.append('titulo', formData.titulo); 
+        data.append('direccion', formData.direccion); 
+        data.append('descripcion', formData.descripcion); 
 
-        const res = await articuloRequest(data); 
-        console.log(res);
+        // Manejo de imágenes
+        if (formData.imgs) { // Verifica que imgs no sea null
+            for (let img of formData.imgs) {
+                data.append('imgs', img); // Usa la instancia de FormData (data)
+            }
+        }
 
-        setFormData({
-            titulo: '', 
-            direccion: '',
-            descripcion: '',
-            imgs:''
-        });
+        try {
+            const res = await articuloRequest(data); 
+            console.log(res);
+            setMessage('Publicado con éxito!');
+            setTimeout(() => setMessage(''), 3000);
+        } catch (error) {
+            console.error('Error al publicar:', error);
+            setMessage('Error al publicar. Inténtalo de nuevo.');
+        }
+    });
 
-        // Muestra el mensaje de éxito
-        setMessage('Publicado con éxito!');
-        
-        //  Ocultar el mensaje después de unos segundos
-        setTimeout(() => {
-            setMessage('');
-        }, 3000);
-    })
-
-    
-
-    return(
+    return (
         <div className='contForm'>
-        <Form onSubmit={onSubmit} className='formBlog'>
+            <Form onSubmit={onSubmit} className='formBlog'>
                 <Form.Group controlId="formTitulo">
                     <Form.Label>Ingrese el titulo</Form.Label>
                     <Form.Control 
@@ -80,10 +69,10 @@ function FormBlogAdm(){
                         onChange={handleChange} 
                         value={formData.titulo} 
                     />
-                    {errors.titulo && <span className="text-danger">{errors.titulo.message}</span>}
+                    {errors.titulo && <span className="text-danger">Este campo es requerido</span>}
                 </Form.Group>
                 <Form.Group controlId="formDireccion">
-                    <Form.Label>Ingrese el direccion</Form.Label>
+                    <Form.Label>Ingrese la dirección</Form.Label>
                     <Form.Control 
                         type="text" 
                         name="direccion" 
@@ -91,10 +80,10 @@ function FormBlogAdm(){
                         onChange={handleChange} 
                         value={formData.direccion} 
                     />
-                    {errors.direccion && <span className="text-danger">{errors.direccion.message}</span>}
+                    {errors.direccion && <span className="text-danger">Este campo es requerido</span>}
                 </Form.Group>
-                <Form.Group controlId="formDescripcio">
-                    <Form.Label>Ingrese el descripcion</Form.Label>
+                <Form.Group controlId="formDescripcion">
+                    <Form.Label>Ingrese la descripción</Form.Label>
                     <Form.Control 
                         type="text" 
                         name="descripcion" 
@@ -102,27 +91,23 @@ function FormBlogAdm(){
                         onChange={handleChange} 
                         value={formData.descripcion} 
                     />
-                    {errors.descripcion && <span className="text-danger">{errors.descripcion.message}</span>}
+                    {errors.descripcion && <span className="text-danger">Este campo es requerido</span>}
                 </Form.Group>
-                <Form.Group controlId="formImagen">
-                    <Form.Label>Subir imagen</Form.Label>
-                    <Form.Control 
-                        type="file" 
-                        name="imgs" 
-                        accept="image/*" 
-                        multiple 
-                        onChange={handleChange} 
-                    />
-                </Form.Group>
+                <Form.Control 
+                    type="file" 
+                    name="imgs" 
+                    accept="image/*" 
+                    multiple 
+                    onChange={handleChange} 
+                />
+                {errors.imgs && <span className="text-danger">Las imágenes son requeridas</span>}
 
                 <br />
                 <Button type='submit' className="botonIngresar">Publicar</Button>
-            
-            
-        </Form>
-        <p>{message}</p>
+            </Form>
+            <p>{message}</p>
         </div>
-    )
-};
+    );
+}
 
 export default FormBlogAdm;

@@ -5,11 +5,11 @@ const BlogSchema = new mongoose.Schema({
     titulo: {
         type: mongoose.Schema.Types.String, required: true, trim: true,
     },direccion: {
-        type: mongoose.Schema.Types.String, required: true, trim: true, unique: true
+        type: mongoose.Schema.Types.String, required: true, trim: true, 
     },descripcion: {
         type: mongoose.Schema.Types.String, required: true, trim: true,
     },imgs: {
-        type: mongoose.Schema.Types.Array, required: true, trim: true, unique: true
+        type: mongoose.Schema.Types.Array, required: true, trim: true, 
     }
 });
 
