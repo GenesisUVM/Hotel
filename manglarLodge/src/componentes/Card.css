@@ -9,6 +9,7 @@
 }
 
 .cardBlog{
-    width: 100%;
-    height: 100vh;
+    width: 18rem;
+    background: #D7F9FF !important;
+    margin: 1rem;
 }

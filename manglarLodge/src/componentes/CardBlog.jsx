@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import Card from 'react-bootstrap/Card';
 
 // eslint-disable-next-line react/prop-types
 function CardBlog({ titulo, direccion, descripcion, imgs }) {
   return (
 
-    <Card style={{ width: '18rem' }}>
+    <Card  className='cardBlog'>
       {/* Renderiza solo la primera imagen si está disponible */}
       {imgs && imgs.length > 0 ? (
         <Card.Img variant="top" src={imgs[0]} alt="Card image" /> // Solo la primera imagen
