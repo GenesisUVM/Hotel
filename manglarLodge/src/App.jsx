@@ -10,6 +10,8 @@ import InicioAdm from './vistas/Adm/InicioAdm'
 import InicioUsuario from './vistas/Usuarios/inicioUsuario'
 import Registro from './vistas/Usuarios/Registro'
 import Perfil from './vistas/Usuarios/Perfil'
+import Home from './vistas/Usuarios/Home'
+import Reservaciones from './vistas/Adm/Reservaciones'
 
 
 function App() {
@@ -21,12 +23,14 @@ function App() {
       <Route path='/adm/loginAdm' element={<InicioAdm />} />
       <Route path='/usuario/loginUsuario' element={<InicioUsuario />} />
       <Route path='/usuario/landingPage' element={<LandingPage />} />
+      <Route path='/usuario/home' element={<Home />} />
       <Route path='/usuario/reservas' element={<Reservas />} />
       <Route path='/usuario/reseñas' element={<Reseñas />} />
       <Route path='/usuario/blog' element={<Blog />} />
       <Route path='/usuario/perfil' element={<Perfil />} />
       <Route path='/adm/habitaciones' element={<Habitaciones />} />
       <Route path='/adm/blogForm' element={<BlogForm />} />
+      <Route path='/adm/reservas' element={<Reservaciones />} />
     </Routes>
    </BrowserRouter>
   )

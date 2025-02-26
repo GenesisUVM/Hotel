@@ -21,6 +21,7 @@ function NavAdm() {
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="/adm/habitaciones">Informacion Hotel</NavDropdown.Item>
               <NavDropdown.Item href="/adm/blogForm">Blog Turistico</NavDropdown.Item>
+              <NavDropdown.Item href="/adm/reservas">Reservas</NavDropdown.Item>
     
             </NavDropdown>
             </div>
@@ -29,6 +30,7 @@ function NavAdm() {
             <Nav className="me-auto">
             <Nav.Link href="/adm/habitaciones">Informacion Hotel</Nav.Link>
             <Nav.Link href="/adm/blogForm">Blog Turistico</Nav.Link>
+            <Nav.Link href="/adm/reservas">Reservas</Nav.Link>
             
           </Nav>
             </div>

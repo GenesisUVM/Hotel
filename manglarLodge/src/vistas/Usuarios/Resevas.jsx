@@ -7,6 +7,7 @@ function Reservas(){
     return(
         <div className='vistaReservas'>
             <NavUsuarios />
+            <h3 className='titulo'>Formulario de reservacion</h3>
             <FormReservas />
         </div>
     )

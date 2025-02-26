@@ -30,9 +30,15 @@
     background: #FFEDE1;
 }
 
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
 .vistaTestimonio{
     display: flex;
     flex-direction: column;
+    
     background: #FFEDE1;
 }
 
@@ -43,19 +49,70 @@
     margin-top: 6rem;
 }
 .vistaTestimonio Button{
-    width: auto;
-    margin: 2rem;
+    width: 18rem;
+    margin: auto;
 }
 
 .modalCuerpo{
     background:#FFEDE1 ;
 }
 
+.contenedor{
+    margin-top: 3rem;
+}
+.textImgs{
+    padding: 0 !important;
+}
+.text{
+    margin: 1.5rem;
+    align-self: center;
+    font-size: 0.8rem;
+}
+.contSecond{
+    color: #000;
+    padding: 1.5rem;
+    background: #D7F9FF;
+    margin-top: 0 !important;
+}
+
+
 /*Estilos para laptops y PC*/
+@media (min-width: 500px){
+    .text{
+        margin-top: 3rem;
+        
+    font-size: 1rem;
+    }
+   .contSecond{
+        margin-top: 10rem;
+        
+    }
+}
+@media (min-width: 1000px){
+    .text{
+        margin-top: 3.5rem;
+    font-size: 1.6rem;
+    }
+    .textImgs{
+        font-size: 1.3rem;
+    }.contSecond{
+        margin-top: 6rem !important;
+        
+    }
+}
+
 
 @media (min-width: 1200px){
 
     .vistaReservas{
         height: 150vh;
+    }.textImgs{
+        font-size: 1.8rem;
+    }
+    .text{
+        margin-top: 4.5rem;
+    }.contSecond{
+        margin-top: 10rem !important;
+        
     }
 }
