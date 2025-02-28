@@ -5,15 +5,15 @@ body {
 }
 
 body.dark-mode {
-    background-color: #121212; /* Color de fondo oscuro */
+    background-color: #0E1C36; /* Color de fondo oscuro */
     color: white; /* Color de texto oscuro */
 }
 
 .theme-toggle {
-    padding: 10px 20px;
+    padding: 0.2rem;
     border: none;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #1a366b;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Modo.css'
+import icono from '../img/modo-oscuro.png'
 
 const AlternarTema = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,6 +24,8 @@ const AlternarTema = () => {
     return (
         <button onClick={toggleTheme} className="theme-toggle">
             {isDarkMode ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro'}
+            <img src={icono} alt="icono modo claro / oscuro" 
+              width="30" />
         </button>
     );
 };

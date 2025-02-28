@@ -7,6 +7,7 @@
     background: #D7F9FF;
     padding: 1.5rem;
     border-radius: 1rem;
+    color: #000;
 }
 
 
@@ -18,10 +19,14 @@
     background: #D7F9FF;
     padding: 1.5rem;
     border-radius: 1rem;
+    
+    color: #000;
 }
 
 .formReseña{
     width: 90%;
+    
+    color: #000;
     margin: auto;
 }
 
@@ -33,4 +38,6 @@
     border-radius: 1rem;
     position: relative;
     top: 6rem;
+    
+    color: #000;
 }
