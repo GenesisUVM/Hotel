@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import Card from 'react-bootstrap/Card';
+import './Card.css'
 
 // eslint-disable-next-line react/prop-types
-function CardBlog({ titulo, direccion, descripcion, imgs }) {
+function CardBlog({ titulo, direccion, descripcion, imgs,pdf }) {
   return (
 
     <Card  className='cardBlog'>
@@ -16,6 +17,7 @@ function CardBlog({ titulo, direccion, descripcion, imgs }) {
         <Card.Title>{titulo}</Card.Title>
         <Card.Text>{direccion}</Card.Text>
         <Card.Text>{descripcion}</Card.Text>
+        <Card.Link href={`http://localhost:4000/${pdf}`} target="_blank" rel="noopener noreferrer" download>Descargar PDF guia turistica</Card.Link>
       </Card.Body>
     </Card>
     

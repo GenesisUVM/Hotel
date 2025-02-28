@@ -41,6 +41,7 @@ function Blog(){
                             direccion={item.direccion}
                             descripcion={item.descripcion} 
                             imgs={item.imgs} 
+                            pdf={item.pdf}
                             />
                     ))
                 ) : (

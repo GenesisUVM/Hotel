@@ -8,6 +8,7 @@ function BlogForm(){
     return(
         <>
         <NavAdm />
+        <h2>Formlario articulos del blog</h2>
         <FormBlogAdm />
         </>
     )

@@ -13,3 +13,7 @@
     background: #D7F9FF !important;
     margin: 1rem;
 }
+
+.cardBlog a {
+    cursor: pointer;
+  }

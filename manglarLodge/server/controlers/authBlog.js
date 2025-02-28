@@ -2,39 +2,50 @@ import {Blog} from '../models/BlogModel.js'
 
 
 export const blog = async (req, res) => {
-  const { titulo, direccion, descripcion } = req.body;
-  const imgs = req.files ? req.files.map(file => file.path) : []; 
+  try {
+    const { titulo, direccion, descripcion } = req.body;
 
-  if (!imgs.length) {
-   return res.status(400).json({ error: 'No se han subido imágenes' });
-}
+    // Verifica que los archivos se hayan subido correctamente
+    const imgs = req.files.imgs ? req.files.imgs.map(file => file.path) : [];
+    const pdf = req.files.pdf ? req.files.pdf[0].path : null;
 
- try{
+    // Asegúrate de que al menos una imagen y un PDF estén presentes
+    if (!imgs.length) {
+        return res.status(400).json({ error: 'No se han subido imágenes' });
+    }
 
+    if (!pdf) {
+        return res.status(400).json({ error: 'No se ha subido un archivo PDF' });
+    }
+
+    // Crea un nuevo documento en la base de datos
     const newBlog = new Blog({
-         titulo, 
+        titulo,
         direccion,
         descripcion,
-        imgs
-        })
-    
-      const blogSaved = await newBlog.save();
-      res.status(201).json({ message: 'Artículo creado con éxito', blog });
-      res.json({
-        id: blogSaved._id,
-        titulo: blogSaved.titulo,
-        direccion: blogSaved.direccion,
-        descripcion: blogSaved.descripcion,
-        imgs: blogSaved.imgs
-      });
+        imgs,
+        pdf,
+    });
 
-   
+    // Guarda el documento en la base de datos
+    const blogSaved = await newBlog.save();
 
- }catch(error){
-    console.log(error);
-    res.status(400).json({ error: error.message });
- }
-
+    // Responde con el artículo creado
+    res.status(201).json({
+        message: 'Artículo creado con éxito',
+        blog: {
+            id: blogSaved._id,
+            titulo: blogSaved.titulo,
+            direccion: blogSaved.direccion,
+            descripcion: blogSaved.descripcion,
+            imgs: blogSaved.imgs,
+            pdf: blogSaved.pdf,
+        },
+    });
+} catch (error) {
+    console.error('Error en el controlador:', error);
+    res.status(500).json({ error: 'Error al guardar el artículo' });
+}
  
 };
 
