@@ -1,3 +1,4 @@
+import FormHabitaciones from '../../componentes/FormHabitaciones';
 import NavAdm from '../../componentes/NavAdm';
 import './Adm.css'
 
@@ -6,6 +7,7 @@ function Habitaciones(){
     return(
         <>
         <NavAdm />
+        <FormHabitaciones />
         </>
     )
 };
