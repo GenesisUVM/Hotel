@@ -4,6 +4,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../img/logo.png'
 import './NavBar.css'
+import AlternarTema from './ModoDark';
 
 function NavAdm() {
   return (
@@ -22,7 +23,7 @@ function NavAdm() {
               <NavDropdown.Item href="/adm/habitaciones">Informacion Hotel</NavDropdown.Item>
               <NavDropdown.Item href="/adm/blogForm">Blog Turistico</NavDropdown.Item>
               <NavDropdown.Item href="/adm/reservas">Reservas</NavDropdown.Item>
-    
+              <AlternarTema />
             </NavDropdown>
             </div>
             <div className="d-none d-md-block">
@@ -31,7 +32,7 @@ function NavAdm() {
             <Nav.Link href="/adm/habitaciones">Informacion Hotel</Nav.Link>
             <Nav.Link href="/adm/blogForm">Blog Turistico</Nav.Link>
             <Nav.Link href="/adm/reservas">Reservas</Nav.Link>
-            
+            <AlternarTema />
           </Nav>
             </div>
           

@@ -8,7 +8,6 @@
     align-content: center;
     flex-wrap: wrap;
     height: 100vh;
-    background: #FFEDE1;
     flex-direction: column;
 }
 
@@ -27,7 +26,6 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    background: #FFEDE1;
 }
 
 .titulo{
@@ -39,7 +37,6 @@
     display: flex;
     flex-direction: column;
     
-    background: #FFEDE1;
 }
 
 .cardshabitaciones{
