@@ -78,12 +78,13 @@ function Reservaciones(){
                                 key={item._id}
                                 nombre={item.nombre}
                                 habitacion={item.tipo_habitacion}
+                                metodo_pago={item.metodo_pago}
                                 fecha_ingreso={item.fecha_ingreso ? formatDate(item.fecha_ingreso) : 'Fecha no disponible'} 
                                 correo={item.correo} 
                                 />
                         ))
                     ) : (
-                        <p>No hay competencias registradas en esta categoría.</p>
+                        <p>No hay reservaciones de este tipo de habitacion</p>
                     )}
                 </div>
             ))}

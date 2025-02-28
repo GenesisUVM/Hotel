@@ -148,10 +148,10 @@ function FormReservas(){
                         <option value="matrimonial">Matrimonial</option>
                         <option value="doble">Doble</option>
                         <option value="triple">Triple</option>
-                        <option value="familiar4">Familiar 4 personas</option>
-                        <option value="familiar5">Familiar 5 personas</option>
-                        <option value="familiar6">Familiar 6 personas</option>
-                        <option value="familiar8">Familiar 8 personas</option>
+                        <option value="familiar 4">Familiar 4 personas</option>
+                        <option value="familiar 5">Familiar 5 personas</option>
+                        <option value="familiar 6">Familiar 6 personas</option>
+                        <option value="familiar 8">Familiar 8 personas</option>
                     </Form.Select>
                 </Form.Group>
                 <br />

@@ -25,7 +25,7 @@ function NavUsuarios() {
               <NavDropdown.Item href="/usuario/blog">Blog Turistico</NavDropdown.Item>
               <NavDropdown.Item href="/usuario/reseñas">Reseñas</NavDropdown.Item>
               <NavDropdown.Item href="/usuario/reservas">Reservas</NavDropdown.Item>
-              <AlternarTema />
+         
             </NavDropdown>
             </div>
             <div className="d-none d-md-block">
@@ -36,10 +36,10 @@ function NavUsuarios() {
             <Nav.Link href="/usuario/blog">Blog Turistico</Nav.Link>
             <Nav.Link href="/usuario/reseñas">Reseñas</Nav.Link>
             <Nav.Link href="/usuario/reservas">Reservas</Nav.Link>
-            <AlternarTema/>
+            
           </Nav>
             </div>
-          
+            <AlternarTema/>
         </Container>
       </Navbar>
       

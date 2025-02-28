@@ -2,7 +2,11 @@
 import Card from 'react-bootstrap/Card';
 import './Card.css'
 
-// eslint-disable-next-line react/prop-types
+const capitalizeFirstLetter = (string) => {
+  if (!string) return ''; // Manejar el caso de strings vacíos
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 function CardBlog({ titulo, direccion, descripcion, imgs,pdf }) {
   return (
 
@@ -14,9 +18,11 @@ function CardBlog({ titulo, direccion, descripcion, imgs,pdf }) {
         <Card.Img variant="top" src="default-image.jpg" alt="Default image" /> // Imagen por defecto si no hay imágenes
       )}
       <Card.Body>
-        <Card.Title>{titulo}</Card.Title>
-        <Card.Text>{direccion}</Card.Text>
-        <Card.Text>{descripcion}</Card.Text>
+        <Card.Title>{`${capitalizeFirstLetter(titulo)}`}</Card.Title>
+        <Card.Text> {`${capitalizeFirstLetter(direccion)}`}</Card.Text>
+        </Card.Body>
+        <Card.Body>
+        <Card.Text> {`${capitalizeFirstLetter(descripcion)}`}</Card.Text>
         <Card.Link href={`http://localhost:4000/${pdf}`} target="_blank" rel="noopener noreferrer" download>Descargar PDF guia turistica</Card.Link>
       </Card.Body>
     </Card>

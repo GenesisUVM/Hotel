@@ -10,7 +10,6 @@ import './Usuarios.css'
 
 /*Componente vista de reseñas de los usuarios y formulario para dejar una reseña */
 
-// eslint-disable-next-line react/prop-types
 function Reseñas(){
     const [testimonios, setTestimonio] = useState([]);
     const [error, setError] = useState(null);
@@ -25,10 +24,10 @@ function Reseñas(){
         'matrimonial',
         'doble',
         'triple',
-        'familiar4',
-        'familiar5',
-        'familiar6',
-        'familiar8'
+        'familiar 4',
+        'familiar 5',
+        'familiar 6',
+        'familiar 8'
     ];
 
     useEffect(() => {
